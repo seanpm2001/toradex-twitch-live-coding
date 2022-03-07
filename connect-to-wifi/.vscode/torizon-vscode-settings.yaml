@@ -1,0 +1,18 @@
+label: Python 3 console application
+detail: >-
+  $(terminal) Creates a minimal console application sample, based on a debian
+  container
+tags:
+  - console
+testing:
+  - title: Python 3
+    createCmd: torizon.createPythonApp
+    projName: PythonConsoleApp
+    platformDistroCodeName: bullseye
+    baseContainer: debian-python3_bullseye
+    mainSourceFile: main.py
+    mainSourceFileBreakPoint: 4
+    programOutput: Hello world
+    hasSDKContainer: false
+    stopOnEntry: false
+extversion: 1.4.281

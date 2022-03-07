@@ -1,0 +1,83 @@
+devices:
+    common: []
+    debug: []
+    release: []
+dockercomposefile:
+    common: ''
+    debug: ''
+    release: ''
+extraparms:
+    common:
+        network_mode: host
+    debug: {}
+    release: {}
+id: 00000000-0000-0000-0000-000000000000
+images:
+    debug: ''
+    release: ''
+imagetags:
+    debug: connect-to-wifi_arm64v8-debian-python3_bullseye_debug_00000000-0000-0000-0000-000000000000
+    release: connect-to-wifi_arm64v8-debian-python3_bullseye_release_00000000-0000-0000-0000-000000000000
+modificationdate: '2022-02-11T21:19:06.596341'
+networks:
+    common: []
+    debug: []
+    release: []
+otapackagename: ''
+otapackageversion: 1.0.0
+platformid: arm64v8-debian-python3_bullseye
+ports:
+    common: {}
+    debug: {}
+    release: {}
+privatekey: ''
+props:
+    common:
+        appargs: ''
+        appname: connect-to-wifi
+        arg: ''
+        buildcommands: ''
+        buildfiles: ''
+        command: ''
+        devpackages: ''
+        env: ''
+        expose: ''
+        extrapackages: python3-dbus
+        language: python
+        main: main.py
+        preinstallcommands: ''
+        runtime: python3
+        sdkpostinstallcommands: ''
+        sdkpreinstallcommands: ''
+        targetcommands: ''
+        targetfiles: ''
+    debug:
+        arg: 'ARG SSHUSERNAME=#%application.username%#
+
+            '
+    release: {}
+publickey: ''
+sdkimages:
+    debug: ''
+    release: ''
+sdkimagetags:
+    debug: ''
+    release: ''
+sdksshaddress:
+    debug: null
+    release: null
+shutdownscript:
+    common: ''
+    debug: ''
+    release: ''
+startupscript:
+    common: ''
+    debug: ''
+    release: ''
+username: torizon
+volumes:
+    common:
+        /var/run/dbus: /var/run/dbus
+    debug:
+        /home/torizon/connect-to-wifi: /connect-to-wifi,rw
+    release: {}
