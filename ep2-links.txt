@@ -1,0 +1,6 @@
+https://www.toradex.com/torizon
+https://www.cnx-software.com/2021/06/07/combining-ostree-and-sw-containers-for-reliable-iot-device-updates/
+https://ostreedev.github.io/ostree/
+https://developer-next.toradex.com/torizon/working-with-torizon/torizoncore-technical-overview/
+https://developer-next.toradex.com/torizon/in-depth/ostree/
+https://www.toradex.com/blog/is-torizon-ota-safe-for-power-loss
