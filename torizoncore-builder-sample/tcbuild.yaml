@@ -1,0 +1,35 @@
+input:
+  easy-installer:
+    toradex-feed:
+      version: 5.5.0
+      release: quarterly
+      machine: apalis-imx8
+      distro: torizon
+      variant: torizon-core-docker
+      build-number: 11
+
+customization:
+  splash-screen: Max.png
+  filesystem:
+    - changes
+    - changes-manual
+  kernel:
+    arguments:
+      - drm.edid_firmware=edid/800x600.bin
+
+output:
+  ostree:
+    branch: "${OSTREE_REF:?Please provide OSTREE_REF}"
+    commit-subject: "OSTree commit for customized image"
+    commit-body: "This is my customized TorizonCore image"
+  easy-installer:
+    local: tezi-output
+    name: "My customized image"
+    description: "My customized image"
+    licence: LICENSE.html
+    release-notes: release-notes.html
+    bundle:
+      compose-file: docker-compose.yml
+      platform: linux/arm/v7
+      username: "${DOCKER_HUB_USERNAME:?Please provide DOCKER_HUB_USERNAME}"
+      password: "${DOCKER_HUB_PASSWORD:?Please provide DOCKER_HUB_PASSWORD}"
